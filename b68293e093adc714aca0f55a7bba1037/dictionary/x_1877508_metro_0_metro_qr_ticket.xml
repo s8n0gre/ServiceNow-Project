@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="4edc1dfc93ad0b14aca0f55a7bba1098" label="Metro QR Ticket" max_length="40" name="x_1877508_metro_0_metro_qr_ticket" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Ticket Status" max_length="40" name="ticket_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Expired" sequence="2" value="expired"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Used" sequence="1" value="used"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Student Pass" max_length="32" name="student_pass" reference="x_1877508_metro_0_metro_student_pass" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Booking" max_length="32" name="booking" reference="x_1877508_metro_0_metro_booking" type="reference"/>
+        <element label="QR Code Value" max_length="40" name="qr_code_value" type="string"/>
+        <element label="Valid From" max_length="40" name="valid_from" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Exit Status" max_length="40" name="exit_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Exit Done" sequence="1" value="exit_done"/>
+                <element inactive_on_update="false" label="Not Used" sequence="0" value="not_used"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Entry Status" max_length="40" name="entry_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Entry Done" sequence="1" value="entry_done"/>
+                <element inactive_on_update="false" label="Not used" sequence="0" value="not_used"/>
+            </choice>
+        </element>
+        <element label="QR Ticket ID" max_length="40" name="qr_ticket_id" type="string"/>
+        <element label="Valid Until" max_length="40" name="valid_until" type="glide_date"/>
+        <index name="index">
+            <element name="booking"/>
+        </index>
+        <index name="index2">
+            <element name="student_pass"/>
+        </index>
+    </element>
+</database>

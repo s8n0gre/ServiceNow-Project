@@ -38,7 +38,7 @@ If Valid Until is before today, Pass Status becomes Expired.</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>673762cd93e5cb14aca0f55a7bba1024</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Pass Expiry Automation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
@@ -46,11 +46,11 @@ If Valid Until is before today, Pass Status becomes Expired.</description>
         <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
         <sys_update_name>sys_hub_flow_673762cd93e5cb14aca0f55a7bba1024</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-06-16 17:43:22</sys_updated_on>
+        <sys_updated_on>2026-06-24 06:55:17</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>b70aaac59329cb14aca0f55a7bba10db</version_record>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=673762cd93e5cb14aca0f55a7bba1024"/>
     <sys_variable_value action="delete_multiple" query="document_key=673762cd93e5cb14aca0f55a7bba1024"/>
@@ -422,7 +422,7 @@ If Valid Until is before today, Pass Status becomes Expired.</description>
         <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
         <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"130aaac59329cb14aca0f55a7bba105f","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
         <plan_id>673762cd93e5cb14aca0f55a7bba1024</plan_id>
-        <snapshot>219992e99365cf14aca0f55a7bba10d3</snapshot>
+        <snapshot>e5b2a5e34725831079b5f9cf016d43b9</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-06-16 17:43:22</sys_created_on>
         <sys_domain>global</sys_domain>

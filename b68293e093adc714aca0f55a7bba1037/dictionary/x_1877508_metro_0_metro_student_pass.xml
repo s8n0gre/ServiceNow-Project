@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="b59a11f893ad0b14aca0f55a7bba10c7" label="Metro Student Pass" max_length="40" name="x_1877508_metro_0_metro_student_pass" type="collection">
+        <element label="Valid From" max_length="40" name="valid_from" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Pass Amount" max_length="20" name="pass_amount" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Payment Status" max_length="40" name="payment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Paid" sequence="1" value="paid"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Failed" sequence="2" value="failed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="QR Ticket" max_length="32" name="qr_ticket" reference="x_1877508_metro_0_metro_qr_ticket" type="reference"/>
+        <element label="Pass Number" max_length="40" name="pass_number" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Destination Station" max_length="32" name="destination_station" reference="x_1877508_metro_0_metro_stations" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Pass Status" max_length="40" name="pass_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Expired" sequence="2" value="expired"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="draft"/>
+            </choice>
+        </element>
+        <element label="Valid Until" max_length="40" name="valid_until" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Student" max_length="32" name="student" reference="x_1877508_metro_0_metro_student_profile" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Source Station" max_length="32" name="source_station" reference="x_1877508_metro_0_metro_stations" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Pass Type" max_length="40" name="pass_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Monthly" sequence="1" value="monthly"/>
+                <element inactive_on_update="false" label="Weekly" sequence="0" value="weekly"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="destination_station"/>
+        </index>
+        <index name="index2">
+            <element name="qr_ticket"/>
+        </index>
+        <index name="index3">
+            <element name="source_station"/>
+        </index>
+        <index name="index4">
+            <element name="student"/>
+        </index>
+    </element>
+</database>

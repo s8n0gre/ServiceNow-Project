@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="3bfcd13093ed0b14aca0f55a7bba1071" label="Metro Complaint" max_length="40" name="x_1877508_metro_0_metro_complaint" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Issue Type" max_length="40" name="issue_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Refund Request" sequence="3" value="refund_request"/>
+                <element inactive_on_update="false" label="QR Not Generated" sequence="1" value="qr_not_generated"/>
+                <element inactive_on_update="false" label="Payment Failed" sequence="0" value="payment_failed"/>
+                <element inactive_on_update="false" label="Gate Issue" sequence="4" value="gate_issue"/>
+                <element inactive_on_update="false" label="Wrong Fare" sequence="2" value="wrong_fare"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Created" sequence="0" value="created"/>
+                <element inactive_on_update="false" label="Resolved" sequence="2" value="resolved"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="In progress" sequence="1" value="in_progress"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Passenger" max_length="32" name="passenger" reference="x_1877508_metro_0_metro_passenger" type="reference"/>
+        <element label="Description" max_length="255" name="description" type="string_full_utf8"/>
+        <element label="Complaint Number" max_length="40" name="complaint_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Booking" max_length="32" name="booking" reference="x_1877508_metro_0_metro_booking" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Student Pass" max_length="32" name="student_pass" reference="x_1877508_metro_0_metro_student_pass" type="reference"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index2">
+            <element name="booking"/>
+        </index>
+        <index name="index3">
+            <element name="passenger"/>
+        </index>
+        <index name="index4">
+            <element name="student_pass"/>
+        </index>
+    </element>
+</database>
