@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1877508_metro_0_metro_student_pass</collection>
+        <condition/>
+        <description>Auto-generates SP##### pass number on insert. Calculates pass amount with weekly (30%) or monthly (40%) discount.</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Auto Student Pass Number and Fare</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+    // Auto-generate Pass Number on Insert
+    if (current.operation() == 'insert' && !current.getValue('pass_number')) {
+        var lastGr = new GlideRecord('x_1877508_metro_0_metro_student_pass');
+        lastGr.orderByDesc('sys_created_on');
+        lastGr.setLimit(1);
+        lastGr.query();
+
+        var nextNum = 1;
+        if (lastGr.next()) {
+            var lastSpNum = lastGr.getValue('pass_number') || '';
+            var numPart = parseInt(lastSpNum.replace('SP', ''), 10);
+            if (!isNaN(numPart)) {
+                nextNum = numPart + 1;
+            }
+        }
+
+        var paddedNum = ('00000' + nextNum).slice(-5);
+        current.setValue('pass_number', 'SP' + paddedNum);
+    }
+
+    // Pass Amount calculation
+    var sourceStation = current.getValue('source_station');
+    var destStation = current.getValue('destination_station');
+    var passType = current.getValue('pass_type');
+
+    if (!sourceStation || !destStation || !passType) {
+        return;
+    }
+
+    // Find route distance
+    var routeGr = new GlideRecord('x_1877508_metro_0_metro_routes');
+    routeGr.addQuery('source_station', sourceStation);
+    routeGr.addQuery('destination_station', destStation);
+    routeGr.query();
+
+    var distanceKm = 0;
+    if (routeGr.next()) {
+        distanceKm = parseFloat(routeGr.getValue('distance_km')) || 0;
+    } else {
+        // Try reverse route
+        var reverseGr = new GlideRecord('x_1877508_metro_0_metro_routes');
+        reverseGr.addQuery('source_station', destStation);
+        reverseGr.addQuery('destination_station', sourceStation);
+        reverseGr.query();
+        if (reverseGr.next()) {
+            distanceKm = parseFloat(reverseGr.getValue('distance_km')) || 0;
+        }
+    }
+
+    if (distanceKm > 0) {
+        var baseFare = distanceKm * 2;
+        if (baseFare < 5) {
+            baseFare = 5;
+        }
+
+        var rides = 0;
+        var discountPercent = 0;
+
+        if (passType == 'weekly') {
+            rides = 10;
+            discountPercent = 30;
+        } else if (passType == 'monthly') {
+            rides = 40;
+            discountPercent = 40;
+        }
+
+        if (rides > 0) {
+            var totalBeforeDiscount = baseFare * rides;
+            var discountAmount = totalBeforeDiscount * (discountPercent / 100);
+            var passAmount = totalBeforeDiscount - discountAmount;
+            current.setValue('pass_amount', passAmount);
+        }
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 07:43:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bac4dda695b24190b3c32cab60878712</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto Student Pass Number and Fare</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_script_bac4dda695b24190b3c32cab60878712</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 07:43:21</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=bac4dda695b24190b3c32cab60878712"/>
+</record_update>

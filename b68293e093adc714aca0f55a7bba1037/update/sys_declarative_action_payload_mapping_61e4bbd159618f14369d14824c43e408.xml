@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_mapping">
+    <sys_declarative_action_payload_mapping action="INSERT_OR_UPDATE">
+        <action_payload_definition display_value="Reject">a1e4bbd1f4618f1405992d9dfc7e2c2f</action_payload_definition>
+        <label>Reject Evam</label>
+        <model display_value="Evam">035d270073151010c342d5fdbdf6a715</model>
+        <payload_map>table={{table}}^sysId={{sys_id}}^EQ</payload_map>
+        <required_translations/>
+        <sys_class_name>sys_declarative_action_payload_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-17 17:48:56</sys_created_on>
+        <sys_id>61e4bbd159618f14369d14824c43e408</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reject Evam</sys_name>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_declarative_action_payload_mapping_61e4bbd159618f14369d14824c43e408</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-17 17:48:56</sys_updated_on>
+    </sys_declarative_action_payload_mapping>
+</record_update>

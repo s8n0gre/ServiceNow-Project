@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate">
+    <sys_ux_composite_data_template_predicate action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="sc_2_sc">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <custom_condition/>
+        <custom_field_list/>
+        <field_list>related_sc_cat_item.category.title,related_sc_cat_item.picture,related_sc_cat_item.name,related_sc_cat_item.price,related_sc_cat_item.short_description,related_sc_cat_item.recurring_price,related_sc_cat_item.recurring_frequency</field_list>
+        <name>Custom portal - Related items predicate</name>
+        <order/>
+        <predicate_bundle display_value="Custom portal - Related items">842e2bd1a1218f146f97e9b925b87eaa</predicate_bundle>
+        <required_roles/>
+        <sys_class_name>sys_ux_composite_data_template_predicate</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-17 17:19:21</sys_created_on>
+        <sys_id>802e2bd17b218f147fac996fc79e06a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Custom portal - Related items predicate</sys_name>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_802e2bd17b218f147fac996fc79e06a5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-17 17:19:21</sys_updated_on>
+        <table>sc_2_sc</table>
+        <ux_template display_value="Custom Portal Catalog item page - Related items template">802e2bd14e218f14a69427784805d8a6</ux_template>
+    </sys_ux_composite_data_template_predicate>
+</record_update>

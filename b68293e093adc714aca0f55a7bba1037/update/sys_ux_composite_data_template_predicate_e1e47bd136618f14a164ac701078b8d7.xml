@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate">
+    <sys_ux_composite_data_template_predicate action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="kb_knowledge">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <custom_condition/>
+        <custom_field_list/>
+        <field_list>short_description,author.avatar,author.name,description,sys_view_count,rating</field_list>
+        <name>Popular articles predicate</name>
+        <order/>
+        <predicate_bundle display_value="Popular articles bundle">e9e47bd1f1618f148fd7561ea5e5c0dc</predicate_bundle>
+        <required_roles/>
+        <sys_class_name>sys_ux_composite_data_template_predicate</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-17 17:48:55</sys_created_on>
+        <sys_id>e1e47bd136618f14a164ac701078b8d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Popular articles predicate</sys_name>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_e1e47bd136618f14a164ac701078b8d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-17 17:48:55</sys_updated_on>
+        <table>kb_knowledge</table>
+        <ux_template display_value="Popular articles template">e9e47bd108618f14adb3ccea171127d8</ux_template>
+    </sys_ux_composite_data_template_predicate>
+</record_update>

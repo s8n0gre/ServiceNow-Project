@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_datasource">
+    <sys_ux_composite_data_m2m_datasource action="INSERT_OR_UPDATE">
+        <dataset display_value="Custom Portal Landing - My Tasks Dataset">e9e47bd1c3618f1428659eac816dc3e1</dataset>
+        <datasource display_value="Custom Portal Landing - My Tasks Datasource (Task table)">ede47bd1f8618f142b50d39a4a8e5cdf</datasource>
+        <sys_class_name>sys_ux_composite_data_m2m_datasource</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-17 17:48:58</sys_created_on>
+        <sys_id>e1e47bd131618f1408c9a315fe4f35df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_ux_composite_data_m2m_datasource_e1e47bd131618f1408c9a315fe4f35df</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-17 17:48:58</sys_updated_on>
+    </sys_ux_composite_data_m2m_datasource>
+</record_update>

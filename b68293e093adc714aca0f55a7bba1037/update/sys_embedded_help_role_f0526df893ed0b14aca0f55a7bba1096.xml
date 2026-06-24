@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1877508_metro_0.MetronTicket Student" name="x_1877508_metro_0.MetronTicket Student">f8526df893ed0b14aca0f55a7bba1016</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-15 17:51:30</sys_created_on>
+        <sys_id>f0526df893ed0b14aca0f55a7bba1096</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>f8526df893ed0b14aca0f55a7bba1016</sys_name>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_embedded_help_role_f0526df893ed0b14aca0f55a7bba1096</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-15 17:51:30</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="6de4bbd141618f14709de4db20aa1603" sys_domain="global" table="sys_user" version="3" view="2_custom_portal_settings_x_1877508_metro_0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>time_zone</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-17 17:48:59</sys_created_on>
+            <sys_id>65e4bbd187618f146a63c79bac70d004</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_user" sys_domain="global" view="61e4bbd1ce618f14ae6e68a0ca784d04">6de4bbd141618f14709de4db20aa1603</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-17 17:48:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-17 17:48:59</sys_created_on>
+            <sys_id>69e4bbd13f618f14103841316120e804</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_user" sys_domain="global" view="61e4bbd1ce618f14ae6e68a0ca784d04">6de4bbd141618f14709de4db20aa1603</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-17 17:48:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>preferred_language</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-17 17:48:59</sys_created_on>
+            <sys_id>e1e4bbd18c618f14f28e752ef8ede802</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_user" sys_domain="global" view="61e4bbd1ce618f14ae6e68a0ca784d04">6de4bbd141618f14709de4db20aa1603</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-17 17:48:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sys_user</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-06-17 17:48:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6de4bbd141618f14709de4db20aa1603</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_user</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+            <sys_update_name>sys_ui_section_6de4bbd141618f14709de4db20aa1603</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-06-17 17:48:59</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="2_custom_portal_settings_x_1877508_metro_0" name="2_custom_portal_settings_x_1877508_metro_0">61e4bbd1ce618f14ae6e68a0ca784d04</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2476000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>When booking payment succeeds, confirm booking and generate QR ticket.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>booking_payment_success</internal_name>
+        <label_cache>[{"name":"Updated_1.current.booking","label":"Trigger - Record Updated➛Metro Payment Record➛Booking","reference":"x_1877508_metro_0_metro_booking","reference_display":"Metro Booking","type":"reference","base_type":"reference","parent_table_name":"x_1877508_metro_0_metro_payment","column_name":"booking","usedInstances":{"e2f081d0-9ee8-4b85-a45e-cb1a1872e98f":["record"],"9ec1f2bd-c158-4fc4-b9ff-47daee042058":["booking"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Metro Payment Record","reference":"x_1877508_metro_0_metro_payment","reference_display":"Metro Payment","type":"reference","base_type":"reference","choices":[{"order":0.0}],"usedInstances":{"e2f081d0-9ee8-4b85-a45e-cb1a1872e98f":["record"]},"attributes":{"":""}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"1f7b5086-067c-4bd4-b9e6-43d8456c863b":["valid_from"],"9ec1f2bd-c158-4fc4-b9ff-47daee042058":["valid_from","valid_until"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Metro Payment Table","reference":"x_1877508_metro_0_metro_payment","reference_display":"Metro Payment","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master_snapshot>7ade84c593658b14aca0f55a7bba101d</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Booking Payment Success</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>97de84c593658b14aca0f55a7bba10b3</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:44:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>466584cd93e18b14aca0f55a7bba106e</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Booking Payment Success</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_hub_flow_466584cd93e18b14aca0f55a7bba106e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:20</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>ebdec4c593658b14aca0f55a7bba1019</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1877508_metro_0_metro_payment">transaction_status=success^bookingISNOTEMPTY<item display_value="Success" endquery="false" field="transaction_status" goto="false" newquery="false" operator="=" or="false" value="success"/>
+            <item endquery="false" field="booking" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>97de84c593658b14aca0f55a7bba10b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:20</sys_updated_on>
+        <table>x_1877508_metro_0_metro_payment</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>466584cd93e18b14aca0f55a7bba106e</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:20</sys_created_on>
+        <sys_id>dfde84c593658b14aca0f55a7bba10b4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:20</sys_updated_on>
+        <trigger display_value="">97de84c593658b14aca0f55a7bba10b3</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=466584cd93e18b14aca0f55a7bba106e^sys_idNOT INdfde84c593658b14aca0f55a7bba10b4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=466584cd93e18b14aca0f55a7bba106e^sys_idNOT IN8e65c44193258b14aca0f55a7bba10c9"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>466584cd93e18b14aca0f55a7bba106e</id>
+        <name>Booking Payment Success</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:44:01</sys_created_on>
+        <sys_id>8e65c44193258b14aca0f55a7bba10c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 05:44:01</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=8e65c44193258b14aca0f55a7bba10c9"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=466584cd93e18b14aca0f55a7bba106e^sys_idNOT IN33a5408193258b14aca0f55a7bba10d6,bba5408193258b14aca0f55a7bba10e1,eba5408193258b14aca0f55a7bba1041"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Booking Payment Success">466584cd93e18b14aca0f55a7bba106e</model>
+        <model_id>466584cd93e18b14aca0f55a7bba106e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_466584cd93e18b14aca0f55a7bba106e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:45:14</sys_created_on>
+        <sys_id>33a5408193258b14aca0f55a7bba10d6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=33a5408193258b14aca0f55a7bba10d6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Booking Payment Success">466584cd93e18b14aca0f55a7bba106e</model>
+        <model_id>466584cd93e18b14aca0f55a7bba106e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_466584cd93e18b14aca0f55a7bba106e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:45:14</sys_created_on>
+        <sys_id>bba5408193258b14aca0f55a7bba10e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 05:45:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bba5408193258b14aca0f55a7bba10e1"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Booking Payment Success">466584cd93e18b14aca0f55a7bba106e</model>
+        <model_id>466584cd93e18b14aca0f55a7bba106e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_466584cd93e18b14aca0f55a7bba106e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:45:13</sys_created_on>
+        <sys_id>eba5408193258b14aca0f55a7bba1041</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=eba5408193258b14aca0f55a7bba1041"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=466584cd93e18b14aca0f55a7bba106e^sys_idNOT IN0ba54c4193258b14aca0f55a7bba10d2"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Booking Payment Success">466584cd93e18b14aca0f55a7bba106e</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:45:11</sys_created_on>
+        <sys_id>0ba54c4193258b14aca0f55a7bba10d2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:17</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=466584cd93e18b14aca0f55a7bba106e^sys_idNOT IN96864c4193258b14aca0f55a7bba101d,eb0d8cc193658b14aca0f55a7bba1070"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Booking Payment Success">466584cd93e18b14aca0f55a7bba106e</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:48:57</sys_created_on>
+        <sys_id>96864c4193258b14aca0f55a7bba101d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:29:39</sys_updated_on>
+        <ui_id>e2f081d0-9ee8-4b85-a45e-cb1a1872e98f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TXU/bMBT9K5WfqyjpB5S+bVSVJjGQgPUFWHRj34A1J85sB9pV/e+7SZy0fAyViYchrS/V/fQ5J/dcrZkUbMpGKMLoKDrgw2g4HIThYDKKkoNhEg3EEBAj1mc5ZEidBrk2guJ7UGWVWK+/FQIcijgKeGkM5i5ItP4h89vNhvqEtIWC1cK3U4bfSSWoj02vbvqsAEObHRo2XT8p7QtNQYKKWs9bbE+xulVRxULzMiN8sWyTJ35y5iu9LzOq0FAFJwr7DJcOc4EEJAVlsc8yyImtNis2daakhEEQZ7ladR13MncN0QyWVv6il0dh1ZciMeNehC6MvUBNOp2BgwvazF1pOr205GgbTQSmUCp3vJtrGs4KJ3XejDhIVDutVZnlp40irFuw8z1KSyCwqHhWyBta6cWdfjhvQc5lXkviKSrNQXUROGdkUroKzpqhwlrjDIqCbiAujL6X9TBByYJbRUGQKv1Ab1p5mwfAK9wBqQrBnPKzOr0AIysSX2kNDW/6zK7ssQJrt1RIw/hnWSFpiHkKca1CLUFcX0I1zI0s3Cd66h498E3fH384ePXCcHtQ9c3bneMvYFWTtQ5caa/LMByKAqT47h3wqMB1nkqToXjuir/e8zYv7cG09dJcohL2BereSw4zIuAwbqR4bKdLX+wtfLFz1LtZKjoI699/Y/27xkrGr50bP9pe187OrbmWcTQ5PByHk5hu2ug49P/eE89d9LkrvM0We+BsbXFZf/+XcbfOeJo72Z3tnTYF74jxuxli8pGs4Gl8eC/8yQE3vwHGdQrrWQkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=96864c4193258b14aca0f55a7bba101d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Booking Payment Success">466584cd93e18b14aca0f55a7bba106e</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:17:26</sys_created_on>
+        <sys_id>eb0d8cc193658b14aca0f55a7bba1070</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:29:39</sys_updated_on>
+        <ui_id>9ec1f2bd-c158-4fc4-b9ff-47daee042058</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91VTU/jMBD9K5XPUZRQKKW3FYjTAlpgubBgOfGktXDs4I/SbtX/vuPYLV0+tKy0FzaXyDPv2e9NxpPbFRGcTMiohOLgqBzVw3I43CuKvfF+WY2GVbnHhwxgn2REsRYQ6VglgfaLjMyZ9CG4oOX48PCgGNMWnNG0SO9HQ52oH8AhlgvbSba8SZSzABh8uxxcbwD1TEhuQJHJ7V1GOmbwDAeGTFYvUh9VLFkFEqHXQfI7DtyyezP2dZc7OI8JbXjQU2QEFg4UBxTSMGkhIy1TnDltlmTijMeAAcYvlFxuETOhHG5IAnZhxU88dlwEXAPorIaY2y5pqlcMNyfMsSvcuXbeJGg906IGG2vCoWFeuuPdWARcdE5oFSm9zcTW0rfqPJaEbDfYfB6MeIsioAs+g/Jko7ma6afLjcpTofqSpKTUNZPbFXPOiMq7oGdFQEKLG9GWdZ1QU9oZPRc9GbW0+VTiIm+kfsJDrZiqnNVBeI5lZfkpxk/68A0zIrg4w22QvM6IXdpjyax99oJFpI8+KInOkgcayxAotRGd+4IHzCHJXWebq8ChOHq3scrquZH67rc716DS+gGt/fBFMeSr1fcOtQOnZV57g+VyeQKs1/dIEZw2Rrev0cYrah0zjoYI3qAWtgyvnJAfpeCRZhniztvIUdpR/K78HhbCvZ2JF/a3HIuFenWH/3u/fzmS/tw5m5F0KkBy+0YrbeYRtFhodBZb68VMSsnBTUqmuVT+q7lUjor++UTTKZr79MNp5z/0zpi6+wV1IlKhswcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eb0d8cc193658b14aca0f55a7bba1070"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_466584cd93e18b14aca0f55a7bba106e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:45:14</sys_created_on>
+        <sys_id>b3a5408193258b14aca0f55a7bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 05:45:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_466584cd93e18b14aca0f55a7bba106e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:45:14</sys_created_on>
+        <sys_id>b7a5408193258b14aca0f55a7bba10c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 05:45:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_466584cd93e18b14aca0f55a7bba106e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 05:45:14</sys_created_on>
+        <sys_id>c4b5408193258b14aca0f55a7bba10e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 05:45:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_466584cd93e18b14aca0f55a7bba106e"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>When booking payment succeeds, confirm booking and generate QR ticket.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>booking_payment_success</internal_name>
+        <label_cache>[{"name":"Updated_1.current.booking","label":"Trigger - Record Updated➛Metro Payment Record➛Booking","reference":"x_1877508_metro_0_metro_booking","reference_display":"Metro Booking","type":"reference","base_type":"reference","parent_table_name":"x_1877508_metro_0_metro_payment","column_name":"booking","usedInstances":{"e2f081d0-9ee8-4b85-a45e-cb1a1872e98f":["record"],"9ec1f2bd-c158-4fc4-b9ff-47daee042058":["booking"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Metro Payment Record","reference":"x_1877508_metro_0_metro_payment","reference_display":"Metro Payment","type":"reference","base_type":"reference","choices":[{"order":0.0}],"usedInstances":{"e2f081d0-9ee8-4b85-a45e-cb1a1872e98f":["record"]},"attributes":{"":""}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"1f7b5086-067c-4bd4-b9e6-43d8456c863b":["valid_from"],"9ec1f2bd-c158-4fc4-b9ff-47daee042058":["valid_from","valid_until"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Metro Payment Table","reference":"x_1877508_metro_0_metro_payment","reference_display":"Metro Payment","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>Booking Payment Success</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Booking Payment Success">466584cd93e18b14aca0f55a7bba106e</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7ade84c593658b14aca0f55a7bba101d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:18</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7ade84c593658b14aca0f55a7bba101d^sys_idNOT IN3ade84c593658b14aca0f55a7bba101f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7ade84c593658b14aca0f55a7bba101d</id>
+        <name>Booking Payment Success</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:18</sys_created_on>
+        <sys_id>3ade84c593658b14aca0f55a7bba101f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:18</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3ade84c593658b14aca0f55a7bba101f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7ade84c593658b14aca0f55a7bba101d^sys_idNOT IN0fde84c593658b14aca0f55a7bba1033,36de84c593658b14aca0f55a7bba1021,c3de84c593658b14aca0f55a7bba1065"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Booking Payment Success">7ade84c593658b14aca0f55a7bba101d</model>
+        <model_id>7ade84c593658b14aca0f55a7bba101d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7ade84c593658b14aca0f55a7bba101d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>0fde84c593658b14aca0f55a7bba1033</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0fde84c593658b14aca0f55a7bba1033"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Booking Payment Success">7ade84c593658b14aca0f55a7bba101d</model>
+        <model_id>7ade84c593658b14aca0f55a7bba101d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7ade84c593658b14aca0f55a7bba101d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:18</sys_created_on>
+        <sys_id>36de84c593658b14aca0f55a7bba1021</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=36de84c593658b14aca0f55a7bba1021"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Booking Payment Success">7ade84c593658b14aca0f55a7bba101d</model>
+        <model_id>7ade84c593658b14aca0f55a7bba101d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7ade84c593658b14aca0f55a7bba101d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>c3de84c593658b14aca0f55a7bba1065</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c3de84c593658b14aca0f55a7bba1065"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7ade84c593658b14aca0f55a7bba101d^sys_idNOT INcbde84c593658b14aca0f55a7bba1088"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Booking Payment Success">7ade84c593658b14aca0f55a7bba101d</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>cbde84c593658b14aca0f55a7bba1088</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7ade84c593658b14aca0f55a7bba101d^sys_idNOT IN43de84c593658b14aca0f55a7bba1085,47de84c593658b14aca0f55a7bba1086"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Booking Payment Success">7ade84c593658b14aca0f55a7bba101d</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>43de84c593658b14aca0f55a7bba1085</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <ui_id>e2f081d0-9ee8-4b85-a45e-cb1a1872e98f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TXU/bMBT9K5WfqyjpB5S+bVSVJjGQgPUFWHRj34A1J85sB9pV/e+7SZy0fAyViYchrS/V/fQ5J/dcrZkUbMpGKMLoKDrgw2g4HIThYDKKkoNhEg3EEBAj1mc5ZEidBrk2guJ7UGWVWK+/FQIcijgKeGkM5i5ItP4h89vNhvqEtIWC1cK3U4bfSSWoj02vbvqsAEObHRo2XT8p7QtNQYKKWs9bbE+xulVRxULzMiN8sWyTJ35y5iu9LzOq0FAFJwr7DJcOc4EEJAVlsc8yyImtNis2daakhEEQZ7ladR13MncN0QyWVv6il0dh1ZciMeNehC6MvUBNOp2BgwvazF1pOr205GgbTQSmUCp3vJtrGs4KJ3XejDhIVDutVZnlp40irFuw8z1KSyCwqHhWyBta6cWdfjhvQc5lXkviKSrNQXUROGdkUroKzpqhwlrjDIqCbiAujL6X9TBByYJbRUGQKv1Ab1p5mwfAK9wBqQrBnPKzOr0AIysSX2kNDW/6zK7ssQJrt1RIw/hnWSFpiHkKca1CLUFcX0I1zI0s3Cd66h498E3fH384ePXCcHtQ9c3bneMvYFWTtQ5caa/LMByKAqT47h3wqMB1nkqToXjuir/e8zYv7cG09dJcohL2BereSw4zIuAwbqR4bKdLX+wtfLFz1LtZKjoI699/Y/27xkrGr50bP9pe187OrbmWcTQ5PByHk5hu2ug49P/eE89d9LkrvM0We+BsbXFZf/+XcbfOeJo72Z3tnTYF74jxuxli8pGs4Gl8eC/8yQE3vwHGdQrrWQkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=43de84c593658b14aca0f55a7bba1085"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Booking Payment Success">7ade84c593658b14aca0f55a7bba101d</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>47de84c593658b14aca0f55a7bba1086</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <ui_id>9ec1f2bd-c158-4fc4-b9ff-47daee042058</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91VTU/jMBD9K5XPUZRQKKW3FYjTAlpgubBgOfGktXDs4I/SbtX/vuPYLV0+tKy0FzaXyDPv2e9NxpPbFRGcTMiohOLgqBzVw3I43CuKvfF+WY2GVbnHhwxgn2REsRYQ6VglgfaLjMyZ9CG4oOX48PCgGNMWnNG0SO9HQ52oH8AhlgvbSba8SZSzABh8uxxcbwD1TEhuQJHJ7V1GOmbwDAeGTFYvUh9VLFkFEqHXQfI7DtyyezP2dZc7OI8JbXjQU2QEFg4UBxTSMGkhIy1TnDltlmTijMeAAcYvlFxuETOhHG5IAnZhxU88dlwEXAPorIaY2y5pqlcMNyfMsSvcuXbeJGg906IGG2vCoWFeuuPdWARcdE5oFSm9zcTW0rfqPJaEbDfYfB6MeIsioAs+g/Jko7ma6afLjcpTofqSpKTUNZPbFXPOiMq7oGdFQEKLG9GWdZ1QU9oZPRc9GbW0+VTiIm+kfsJDrZiqnNVBeI5lZfkpxk/68A0zIrg4w22QvM6IXdpjyax99oJFpI8+KInOkgcayxAotRGd+4IHzCHJXWebq8ChOHq3scrquZH67rc716DS+gGt/fBFMeSr1fcOtQOnZV57g+VyeQKs1/dIEZw2Rrev0cYrah0zjoYI3qAWtgyvnJAfpeCRZhniztvIUdpR/K78HhbCvZ2JF/a3HIuFenWH/3u/fzmS/tw5m5F0KkBy+0YrbeYRtFhodBZb68VMSsnBTUqmuVT+q7lUjor++UTTKZr79MNp5z/0zpi6+wV1IlKhswcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=47de84c593658b14aca0f55a7bba1086"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7ade84c593658b14aca0f55a7bba101d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>07de84c593658b14aca0f55a7bba102f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7ade84c593658b14aca0f55a7bba101d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>4fde84c593658b14aca0f55a7bba1078</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7ade84c593658b14aca0f55a7bba101d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:19</sys_created_on>
+        <sys_id>cbde84c593658b14aca0f55a7bba1060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7ade84c593658b14aca0f55a7bba101d"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>466584cd93e18b14aca0f55a7bba106e</sys_id>
+        <latest_snapshot>7ade84c593658b14aca0f55a7bba101d</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=466584cd93e18b14aca0f55a7bba106e^sys_idNOT IN9fde84c593658b14aca0f55a7bba10b7"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"9fde84c593658b14aca0f55a7bba10b7","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>466584cd93e18b14aca0f55a7bba106e</plan_id>
+        <snapshot>e6df844993658b14aca0f55a7bba1048</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 06:25:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9fde84c593658b14aca0f55a7bba10b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 06:25:20</sys_updated_on>
+        <trigger display_value="">97de84c593658b14aca0f55a7bba10b3</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=466584cd93e18b14aca0f55a7bba106e"/>
+</record_update>
