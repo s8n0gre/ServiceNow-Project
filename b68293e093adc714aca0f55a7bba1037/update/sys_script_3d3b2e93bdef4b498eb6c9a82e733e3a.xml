@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1877508_metro_0_metro_routes</collection>
+        <condition/>
+        <description>Generates route code from first 3 letters of source and destination. Prevents duplicate routes.</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Auto Generate Route Code</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+    var sourceStation = current.getValue('source_station');
+    var destStation = current.getValue('destination_station');
+
+    if (!sourceStation || !destStation) {
+        return;
+    }
+
+    // Validate source != destination
+    if (sourceStation == destStation) {
+        gs.addErrorMessage('Source and Destination stations cannot be the same.');
+        current.setAbortAction(true);
+        return;
+    }
+
+    // Get station names for route code generation
+    var srcGr = new GlideRecord('x_1877508_metro_0_metro_stations');
+    if (srcGr.get(sourceStation)) {
+        var srcName = srcGr.getValue('station_name') || '';
+    }
+
+    var destGr = new GlideRecord('x_1877508_metro_0_metro_stations');
+    if (destGr.get(destStation)) {
+        var dstName = destGr.getValue('station_name') || '';
+    }
+
+    // Generate route code: First 3 chars of each
+    var srcCode = srcName.substring(0, 3);
+    var dstCode = dstName.substring(0, 3);
+    // Capitalize first letter of each
+    srcCode = srcCode.charAt(0).toUpperCase() + srcCode.substring(1).toLowerCase();
+    dstCode = dstCode.charAt(0).toUpperCase() + dstCode.substring(1).toLowerCase();
+
+    current.setValue('route_code', srcCode + dstCode);
+
+    // Duplicate check
+    var dupGr = new GlideRecord('x_1877508_metro_0_metro_routes');
+    dupGr.addQuery('source_station', sourceStation);
+    dupGr.addQuery('destination_station', destStation);
+    dupGr.addQuery('sys_id', '!=', current.getUniqueValue());
+    dupGr.query();
+
+    if (dupGr.hasNext()) {
+        gs.addErrorMessage('This route already exists.');
+        current.setAbortAction(true);
+        return;
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 07:43:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3d3b2e93bdef4b498eb6c9a82e733e3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto Generate Route Code</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_script_3d3b2e93bdef4b498eb6c9a82e733e3a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 07:43:21</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=3d3b2e93bdef4b498eb6c9a82e733e3a"/>
+</record_update>

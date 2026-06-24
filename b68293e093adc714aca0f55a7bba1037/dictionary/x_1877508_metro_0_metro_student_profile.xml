@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="98e7d17493ad0b14aca0f55a7bba102a" label="Metro Student Profile" max_length="40" name="x_1877508_metro_0_metro_student_profile" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Year" max_length="40" name="year" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="3" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="1" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="4" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="2" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element display="true" label="Student Name" max_length="40" name="student_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Verification Status" max_length="40" name="verification_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+            </choice>
+        </element>
+        <element label="Verified Date" max_length="40" name="verified_date" type="glide_date_time"/>
+        <element label="Student ID Number" max_length="40" name="student_id_number" type="string"/>
+        <element label="Department" max_length="40" name="department" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="College Name" max_length="40" name="college_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Verified By" max_length="32" name="verified_by" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+        <index name="index2">
+            <element name="verified_by"/>
+        </index>
+    </element>
+</database>

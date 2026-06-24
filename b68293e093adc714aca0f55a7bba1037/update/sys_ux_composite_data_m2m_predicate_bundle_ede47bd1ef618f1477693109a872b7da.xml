@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_predicate_bundle">
+    <sys_ux_composite_data_m2m_predicate_bundle action="INSERT_OR_UPDATE">
+        <dataset display_value="Custom Portal Landing - My Tasks Dataset">e9e47bd1c3618f1428659eac816dc3e1</dataset>
+        <order/>
+        <predicate_bundle display_value="My Tasks - Task bundle">e5e47bd1b0618f14910cb9f0e809b3dc</predicate_bundle>
+        <sys_class_name>sys_ux_composite_data_m2m_predicate_bundle</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-17 17:48:55</sys_created_on>
+        <sys_id>ede47bd1ef618f1477693109a872b7da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_ux_composite_data_m2m_predicate_bundle_ede47bd1ef618f1477693109a872b7da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-17 17:48:55</sys_updated_on>
+    </sys_ux_composite_data_m2m_predicate_bundle>
+</record_update>

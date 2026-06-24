@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=733000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Every day, system checks active student passes.
+If Valid Until is before today, Pass Status becomes Expired.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>pass_expiry_automation</internal_name>
+        <label_cache>[{"name":"87cb9d77-b1eb-4315-9e0e-5f9f382552d2.Records","label":"1 - Look Up Records➛Metro Student Pass Records","reference":"x_1877508_metro_0_metro_student_pass","reference_display":"Metro Student Pass","type":"records","base_type":"records","usedInstances":{"46b0e804-a2a7-4356-a630-9426b262e2fb":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"46b0e804-a2a7-4356-a630-9426b262e2fb.item","label":"2 - For Each➛Metro Student Pass Record","reference":"x_1877508_metro_0_metro_student_pass","reference_display":"Metro Student Pass","type":"reference","base_type":"reference","usedInstances":{"12ff4755-2a5d-47aa-a72e-89ec1e112c6f":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <master_snapshot>4b0a6ac59329cb14aca0f55a7bba10fc</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Pass Expiry Automation</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>5b0aaac59329cb14aca0f55a7bba105b</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:31:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>673762cd93e5cb14aca0f55a7bba1024</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pass Expiry Automation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_hub_flow_673762cd93e5cb14aca0f55a7bba1024</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-24 06:55:17</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_variable_value action="delete_multiple" query="document_key=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period>1970-01-02 12:05:00</run_period>
+        <run_start>2026-06-16 17:43:21</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5b0aaac59329cb14aca0f55a7bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:21</sys_updated_on>
+        <time/>
+        <timer_type>1</timer_type>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:5b0aaac59329cb14aca0f55a7bba105b^sys_idNOT IN170aaac59329cb14aca0f55a7bba105c"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:5b0aaac59329cb14aca0f55a7bba105b</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period>1970-01-02 12:05:00</run_period>
+        <run_start>2026-06-18 05:48:21</run_start>
+        <run_time/>
+        <run_type>periodically</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('5b0aaac59329cb14aca0f55a7bba105b');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:21</sys_created_on>
+        <sys_id>170aaac59329cb14aca0f55a7bba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:21</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">5b0aaac59329cb14aca0f55a7bba105b</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=673762cd93e5cb14aca0f55a7bba1024^sys_idNOT INab3762cd93e5cb14aca0f55a7bba1025"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>673762cd93e5cb14aca0f55a7bba1024</id>
+        <name>Pass Expiry Automation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:31:06</sys_created_on>
+        <sys_id>ab3762cd93e5cb14aca0f55a7bba1025</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:31:06</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ab3762cd93e5cb14aca0f55a7bba1025"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=673762cd93e5cb14aca0f55a7bba1024^sys_idNOT INad6726819329cb14aca0f55a7bba10f8"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">673762cd93e5cb14aca0f55a7bba1024</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:31:47</sys_created_on>
+        <sys_id>ad6726819329cb14aca0f55a7bba10f8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:19</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07jQBD8ldWcgzV2EnbxDSmKxAGQAHFByGrPtJOReh6MxwGD+PdtP5JdgfCtq7urq8rz9CEIaiRRijsMCEkshHEJowN66AMyviOjsdJdhGS8474FpyH52IsyxQ4XoonePqANBIkXGqCWQR81RlHmUi7EAajD+7690szHDA7swByPF8c+A/nFb3km8zNZ/MqLUq5LKbmr9oZ0RCfKp+eFCBB5Ow3cH19aiQVXRzubf4LNcDZX62alL1ZqWfAnZfFnldfnyzov9BKwXvLctyS+6kw/JPK/V3xL6DTqUxDf4ooI+tZRf5rYc+JTMBbeWvOOM1XEBtmcwql5KittWg67n2C190bhbRi1jEiCmuYd5amz7mbywbXGBjpKj3PgjHQt87FB1jyomCU193v/enc8uDVuNDg3ySugUwUpRVN3CdvhjyChZaLKQgjG7aoQ/cGMy6zFZmN0WUP+lY+2ZucyUIPwjCOCbMv4ZoQfIZrBxTXT8PLn6L566Ya7k49ZcTWZ5oE5lK1Bmp9Zq6IJ6ZIPHI7v8vP5L8ev80LyAgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=673762cd93e5cb14aca0f55a7bba1024^sys_idNOT IN14d9a2c59329cb14aca0f55a7bba103b,59d8e2c19329cb14aca0f55a7bba101f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">673762cd93e5cb14aca0f55a7bba1024</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>46b0e804-a2a7-4356-a630-9426b262e2fb</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:42:20</sys_created_on>
+        <sys_id>14d9a2c59329cb14aca0f55a7bba103b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 05:48:23</sys_updated_on>
+        <ui_id>12ff4755-2a5d-47aa-a72e-89ec1e112c6f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9lcrrtnIeDaW7ERXSSDxGMGLDoOgmvgFLzmNsB9qp+u9znThtBYgBiQ2abKr7ss85uae53TAp2ILFKHhwHCR5FERRyHk4j4MsibIgFBEgBmzMKiiROjXmtRYUP4JqXWKziZOM45zHEwjhaBJHs2QCScQnx3GYZGESYlhkU2mx3G5pTkjTKFjf+HHK5A9SCY0VW9zejVkDmm6yqNli86z0XqgKMlTUejVgfY7drhsXizpvS6xsKofkmZ9c+sro+5IqNOTgBHzMcGWxEkhAClAGx6yESoCt9ZotrG4poRHEZaXWu44HWdmeaAkrI//QzTF3fQUSs9yLsAtTL1CfLpZg4ZpOzm2rd3rVMkfTayKwgFbZk8Nc33DZWFlX/YiFTA3TtWrL6qJXhO0OOHgfrSEQ2DieDnlPq7h+qJ+uBpCnsuok8RRVnYPaRWCtlllrHZwNQ4WdxiU0jazu00bXj7IbJijl9F5RMC1U/UR3GnlfTSF3uKekKkxPKb/s0jegpSNxTsfQ8HbMzNqcKDBmT4U0TH+3DklPzFNIOxU6CdJuE9xwrmVjv9FVj+iBb8feDNnsrQ3Lj/cLdXDm3hCrNJgfHc34PKU11nXK/a+xbYemIcwvfXDuekbXfc/oR9/zMWe8A/fgjJ/dPrzOw5vjRe7scHZ00Re8NWafZo35V7KGp/HlvfEvR/Dwzf/cg03qTGAO3OC2nVYfbGt+tZxHAleN1CheOuCNzo/54B1oBx+cSlTCvAJ/MAGWBNFi2tN5ZgRfHN344u478WluCBLePV/IE//N5+LuLzWG6d89CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=14d9a2c59329cb14aca0f55a7bba103b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">673762cd93e5cb14aca0f55a7bba1024</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:38:02</sys_created_on>
+        <sys_id>59d8e2c19329cb14aca0f55a7bba101f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 05:48:23</sys_updated_on>
+        <ui_id>87cb9d77-b1eb-4315-9e0e-5f9f382552d2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXbWvbMBD+K8GfNjDBbl6Xb6OlMGib0ZR+6TohW3KiTZE9Sc5LS/77TpbsmMTtEkihZZ+C7k665+6eR1Yenj1GvJE3TLpBgMPecBAEnU4Q9PudGIdR1OnHURB1I8/3BJ5TiNQ44hSWC8xzs16hcDgY9IIhmlMtUxS4X6VzQoVGGVYKwglTGcfre7fr2sS0Jjam9d3GxDPGiaTCGz08+l6GJWTUVHqj5x3XoZA5jiiH0DuHeacEvc6qJSp81nZV39a6sY5UEgMl8D260lQQChgSzBX1vTkWBOtUriuLpJiMBd8aZkxoONEzwSvFniDvMDBxCYWqYmp91RK5dllzcoE1nmiZxzqXLjSepSymyvaD0ATnXJ/XbTZgnGmWCrvFlm13pzyfixvbDq86oJwOWHIFIGhmCjXIXRnJZJYub0uUl0wUPXFOnsaYVyustWRRrg2eZ49yOjdsmOMsY2KKMpkuWLEZsMzbUw6LdsLTJSRVbCraODbA29BX3L4E+0VhvseSmSqu4RjYDIAYB4YgO0KV5rJo5QLFPFeFQ2Kh7FnexvfUWp1zINu2cmg5+pMb3LYPrmJkm2a2xJJl+iscsaCuuI1/kGp6wZZycSoIMyhUTTpGGqATrHP1I4cTCC6y/AQ/IygXmvHCHv/CC2xxjKaqHdEpEwK6OE7uUoLXnz7v6+uUR59SlkVPSlme15vS1Cgn0D3bVdMBTqDhyQQKdXwkiULy96fQ4zVnW/AP4cWDV0nW2/JJpVIj28ua8vYFczTPD4BQ8nxsmNmK1i+hcjRPGOWk6Tt0aRw736Gz//M79C5JDoAIstNjgjNRPCoA6FuxP3j9iv2yw7OCXlvuFza48/c1gFs6bT0drYQD4JRKmEDu1p3F0wCxvO8Lyuze9aXRCaBzMgF0zk4jgOeqzKqRDT0v35FmmmX8k4nHu/FAwdqGcNMksKNyhsfmPNvsC7hzlILrZLOeixc4d+IH5wuK9N/yCpjBVpcPWf2iJSNTqrfZyyiS6iXmv5v8jnGoHFRR3hs8XruvyrYfbiUKSkGSKhhe/fUawvNo/w4JfWs+7go5AEvZjmu8at1WYBoRumsElE6nxWzq98i3yupI3j3hg/HdfknLYTVqsJzZh/jPdzohPP4FmgbgEv0QAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=59d8e2c19329cb14aca0f55a7bba101f"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=673762cd93e5cb14aca0f55a7bba1024^sys_idNOT IN3549ee459329cb14aca0f55a7bba101b"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7a0a6ac59329cb14aca0f55a7bba10a6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">673762cd93e5cb14aca0f55a7bba1024</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:39:59</sys_created_on>
+        <sys_id>3549ee459329cb14aca0f55a7bba101b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:19</sys_updated_on>
+        <ui_id>46b0e804-a2a7-4356-a630-9426b262e2fb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty27bMBD8F55tQY/4Id8CFAFyaAOkQS5BIFDkyiZKkSwfdlRB/56lRTtBTkFP4s7uzs5wqZHo4E3w7knfOif2iuxeXhdEqIjheSSCkx0pat7VRV6zqlxXZZ6X25uiXVdtUfKKAl+TBVG0B6wUHnqH4ZHKEONx3G5YW/PNZtkW0C5vqmK1rCGH5aqru2pbrlYlL7NHYNpyN03YyoUzkg7P/8/ADkJyC8mMoRa1ebBkN35J+cFAI2kLEgclBuz/rudL530y/eUOIjuG9sqLn6iizBcE3jwoDjioo9LBgvRUceq1HcjO24CABcoflByuFQehPNKRWPvmxD/kLvI8FnaAjhjMyWvYpIucYXbQgsGD8UKrGfG0lamHaRl69WuWH1cAHQ3SX1aASHDIByZqjiqSpO73QZ8eLwPvhDr7S0mpGZXXiHpvRRs8uLgGkNAjUdNTY4TaN8bqozg3o5Y+20sMsk7qEw6NzzKjLArP8Ipodof4jzP8TK2ILn4iDTZPZ/fN3xDnzj6S4mY2jQWOWWH8LdIdIYmbXuN7nZnc/DA4MOFw4FPE7i9/Q0wMuGTBPkMnbf9EqR/Y9A4YjqL7VwMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_673762cd93e5cb14aca0f55a7bba1024"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Every day, system checks active student passes.
+If Valid Until is before today, Pass Status becomes Expired.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>pass_expiry_automation</internal_name>
+        <label_cache>[{"name":"87cb9d77-b1eb-4315-9e0e-5f9f382552d2.Records","label":"1 - Look Up Records➛Metro Student Pass Records","reference":"x_1877508_metro_0_metro_student_pass","reference_display":"Metro Student Pass","type":"records","base_type":"records","usedInstances":{"46b0e804-a2a7-4356-a630-9426b262e2fb":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"46b0e804-a2a7-4356-a630-9426b262e2fb.item","label":"2 - For Each➛Metro Student Pass Record","reference":"x_1877508_metro_0_metro_student_pass","reference_display":"Metro Student Pass","type":"reference","base_type":"reference","usedInstances":{"12ff4755-2a5d-47aa-a72e-89ec1e112c6f":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <master>true</master>
+        <name>Pass Expiry Automation</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Pass Expiry Automation">673762cd93e5cb14aca0f55a7bba1024</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4b0a6ac59329cb14aca0f55a7bba10fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:20</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4b0a6ac59329cb14aca0f55a7bba10fc^sys_idNOT IN830a6ac59329cb14aca0f55a7bba10fe"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4b0a6ac59329cb14aca0f55a7bba10fc</id>
+        <name>Pass Expiry Automation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:20</sys_created_on>
+        <sys_id>830a6ac59329cb14aca0f55a7bba10fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:20</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=830a6ac59329cb14aca0f55a7bba10fe"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4b0a6ac59329cb14aca0f55a7bba10fc^sys_idNOT INc30aaac59329cb14aca0f55a7bba100e"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">4b0a6ac59329cb14aca0f55a7bba10fc</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:20</sys_created_on>
+        <sys_id>c30aaac59329cb14aca0f55a7bba100e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:20</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07jQBD8ldWcgzV2EnbxDSmKxAGQAHFByGrPtJOReh6MxwGD+PdtP5JdgfCtq7urq8rz9CEIaiRRijsMCEkshHEJowN66AMyviOjsdJdhGS8474FpyH52IsyxQ4XoonePqANBIkXGqCWQR81RlHmUi7EAajD+7690szHDA7swByPF8c+A/nFb3km8zNZ/MqLUq5LKbmr9oZ0RCfKp+eFCBB5Ow3cH19aiQVXRzubf4LNcDZX62alL1ZqWfAnZfFnldfnyzov9BKwXvLctyS+6kw/JPK/V3xL6DTqUxDf4ooI+tZRf5rYc+JTMBbeWvOOM1XEBtmcwql5KittWg67n2C190bhbRi1jEiCmuYd5amz7mbywbXGBjpKj3PgjHQt87FB1jyomCU193v/enc8uDVuNDg3ySugUwUpRVN3CdvhjyChZaLKQgjG7aoQ/cGMy6zFZmN0WUP+lY+2ZucyUIPwjCOCbMv4ZoQfIZrBxTXT8PLn6L566Ya7k49ZcTWZ5oE5lK1Bmp9Zq6IJ6ZIPHI7v8vP5L8ev80LyAgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4b0a6ac59329cb14aca0f55a7bba10fc^sys_idNOT IN4b0aaac59329cb14aca0f55a7bba100b,cf0aaac59329cb14aca0f55a7bba100c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">4b0a6ac59329cb14aca0f55a7bba10fc</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:20</sys_created_on>
+        <sys_id>4b0aaac59329cb14aca0f55a7bba100b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:20</sys_updated_on>
+        <ui_id>87cb9d77-b1eb-4315-9e0e-5f9f382552d2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXbWvbMBD+K8GfNjDBbl6Xb6OlMGib0ZR+6TohW3KiTZE9Sc5LS/77TpbsmMTtEkihZZ+C7k665+6eR1Yenj1GvJE3TLpBgMPecBAEnU4Q9PudGIdR1OnHURB1I8/3BJ5TiNQ44hSWC8xzs16hcDgY9IIhmlMtUxS4X6VzQoVGGVYKwglTGcfre7fr2sS0Jjam9d3GxDPGiaTCGz08+l6GJWTUVHqj5x3XoZA5jiiH0DuHeacEvc6qJSp81nZV39a6sY5UEgMl8D260lQQChgSzBX1vTkWBOtUriuLpJiMBd8aZkxoONEzwSvFniDvMDBxCYWqYmp91RK5dllzcoE1nmiZxzqXLjSepSymyvaD0ATnXJ/XbTZgnGmWCrvFlm13pzyfixvbDq86oJwOWHIFIGhmCjXIXRnJZJYub0uUl0wUPXFOnsaYVyustWRRrg2eZ49yOjdsmOMsY2KKMpkuWLEZsMzbUw6LdsLTJSRVbCraODbA29BX3L4E+0VhvseSmSqu4RjYDIAYB4YgO0KV5rJo5QLFPFeFQ2Kh7FnexvfUWp1zINu2cmg5+pMb3LYPrmJkm2a2xJJl+iscsaCuuI1/kGp6wZZycSoIMyhUTTpGGqATrHP1I4cTCC6y/AQ/IygXmvHCHv/CC2xxjKaqHdEpEwK6OE7uUoLXnz7v6+uUR59SlkVPSlme15vS1Cgn0D3bVdMBTqDhyQQKdXwkiULy96fQ4zVnW/AP4cWDV0nW2/JJpVIj28ua8vYFczTPD4BQ8nxsmNmK1i+hcjRPGOWk6Tt0aRw736Gz//M79C5JDoAIstNjgjNRPCoA6FuxP3j9iv2yw7OCXlvuFza48/c1gFs6bT0drYQD4JRKmEDu1p3F0wCxvO8Lyuze9aXRCaBzMgF0zk4jgOeqzKqRDT0v35FmmmX8k4nHu/FAwdqGcNMksKNyhsfmPNvsC7hzlILrZLOeixc4d+IH5wuK9N/yCpjBVpcPWf2iJSNTqrfZyyiS6iXmv5v8jnGoHFRR3hs8XruvyrYfbiUKSkGSKhhe/fUawvNo/w4JfWs+7go5AEvZjmu8at1WYBoRumsElE6nxWzq98i3yupI3j3hg/HdfknLYTVqsJzZh/jPdzohPP4FmgbgEv0QAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4b0aaac59329cb14aca0f55a7bba100b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">4b0a6ac59329cb14aca0f55a7bba10fc</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>46b0e804-a2a7-4356-a630-9426b262e2fb</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:20</sys_created_on>
+        <sys_id>cf0aaac59329cb14aca0f55a7bba100c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:20</sys_updated_on>
+        <ui_id>12ff4755-2a5d-47aa-a72e-89ec1e112c6f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9lcrrtnIeDaW7ERXSSDxGMGLDoOgmvgFLzmNsB9qp+u9znThtBYgBiQ2abKr7ss85uae53TAp2ILFKHhwHCR5FERRyHk4j4MsibIgFBEgBmzMKiiROjXmtRYUP4JqXWKziZOM45zHEwjhaBJHs2QCScQnx3GYZGESYlhkU2mx3G5pTkjTKFjf+HHK5A9SCY0VW9zejVkDmm6yqNli86z0XqgKMlTUejVgfY7drhsXizpvS6xsKofkmZ9c+sro+5IqNOTgBHzMcGWxEkhAClAGx6yESoCt9ZotrG4poRHEZaXWu44HWdmeaAkrI//QzTF3fQUSs9yLsAtTL1CfLpZg4ZpOzm2rd3rVMkfTayKwgFbZk8Nc33DZWFlX/YiFTA3TtWrL6qJXhO0OOHgfrSEQ2DieDnlPq7h+qJ+uBpCnsuok8RRVnYPaRWCtlllrHZwNQ4WdxiU0jazu00bXj7IbJijl9F5RMC1U/UR3GnlfTSF3uKekKkxPKb/s0jegpSNxTsfQ8HbMzNqcKDBmT4U0TH+3DklPzFNIOxU6CdJuE9xwrmVjv9FVj+iBb8feDNnsrQ3Lj/cLdXDm3hCrNJgfHc34PKU11nXK/a+xbYemIcwvfXDuekbXfc/oR9/zMWe8A/fgjJ/dPrzOw5vjRe7scHZ00Re8NWafZo35V7KGp/HlvfEvR/Dwzf/cg03qTGAO3OC2nVYfbGt+tZxHAleN1CheOuCNzo/54B1oBx+cSlTCvAJ/MAGWBNFi2tN5ZgRfHN344u478WluCBLePV/IE//N5+LuLzWG6d89CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cf0aaac59329cb14aca0f55a7bba100c"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4b0a6ac59329cb14aca0f55a7bba10fc^sys_idNOT IN430aaac59329cb14aca0f55a7bba1009"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7a0a6ac59329cb14aca0f55a7bba10a6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Pass Expiry Automation">4b0a6ac59329cb14aca0f55a7bba10fc</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:20</sys_created_on>
+        <sys_id>430aaac59329cb14aca0f55a7bba1009</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:20</sys_updated_on>
+        <ui_id>46b0e804-a2a7-4356-a630-9426b262e2fb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty27bMBD8F55lQY/4Id+CBAECtA3gBLkUgbEiVzZRilRJyo4q6N+7tGQlyKnoSdrZ18xo1TPT+qb17sXcOicPmm1/vkVM6oDRe8+kYFuWFqIq0qTgebbKsyTJNjdpucrLNBM5oFixiGmokSqlx9pReALVhrjvN2teFmK9XpQploubPF0uCkxwsayKKt9ky2UmsniH3FjhhoFahXSNgu71/yfwo1TC4iSmAUvcPFq27b+k/lWcghIVlT5O6r6I9V0TQjtSmIBvU89uRukRSGRJxPDdoxZI6ytQDiNWgxbgje3Y1tuWAIsgnrTq5oqj1J7GsVD77uQf2pgmSSiskARxHJNzuJ98HOHqHjw802juWzuV8qORHN1ohcAKWuXvPmNjwVPjpdFji4dSXbuNamv9Y3SCzQOun42Q1hEJbILQQH3SUT0fzXl3Zfkg9cWUKakMBzVH4L2VZesDn56hwpoG7WtoGqkP+8aak7w0E5c6PigK4kqZMy0NpxwDD8Rj8hXiB8LvL/ArWBlUfKcx1DxEzHXuToFzH1rIxP3vNjAZlU0a9qMNoYVb2fhbWnDCie7wFq5+nD17yqUjCi8Be7z+UyHR0QVJ/hk6G/srkP/Ahr8Q4inhnQMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4b0a6ac59329cb14aca0f55a7bba10fc"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>673762cd93e5cb14aca0f55a7bba1024</sys_id>
+        <latest_snapshot>4b0a6ac59329cb14aca0f55a7bba10fc</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=673762cd93e5cb14aca0f55a7bba1024^sys_idNOT IN130aaac59329cb14aca0f55a7bba105f"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"130aaac59329cb14aca0f55a7bba105f","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>673762cd93e5cb14aca0f55a7bba1024</plan_id>
+        <snapshot>e5b2a5e34725831079b5f9cf016d43b9</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-16 17:43:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>130aaac59329cb14aca0f55a7bba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-16 17:43:22</sys_updated_on>
+        <trigger display_value="">5b0aaac59329cb14aca0f55a7bba105b</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=673762cd93e5cb14aca0f55a7bba1024"/>
+</record_update>

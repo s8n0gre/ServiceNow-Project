@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="e29c91fc93ad0b14aca0f55a7bba10eb" label="Metro Payment" max_length="40" name="x_1877508_metro_0_metro_payment" type="collection">
+        <element label="Transaction Reference" max_length="40" name="transaction_reference" type="string"/>
+        <element label="Payment ID" max_length="40" name="payment_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Payment Method" max_length="40" name="payment_method" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="UPI" sequence="0" value="upi"/>
+                <element inactive_on_update="false" label="Card" sequence="1" value="card"/>
+                <element inactive_on_update="false" label="Wallet" sequence="2" value="wallet"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Transaction Status" max_length="40" name="transaction_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Failed" sequence="2" value="failed"/>
+                <element inactive_on_update="false" label="Refunded" sequence="3" value="refunded"/>
+                <element inactive_on_update="false" label="Success" sequence="1" value="success"/>
+                <element inactive_on_update="false" label="Initiated" sequence="0" value="initiated"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Booking" max_length="32" name="booking" reference="x_1877508_metro_0_metro_booking" type="reference"/>
+        <element label="Payment Time" max_length="40" name="payment_time" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Amount" max_length="20" name="amount" type="currency"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Student Pass" max_length="32" name="student_pass" reference="x_1877508_metro_0_metro_student_pass" type="reference"/>
+        <index name="index">
+            <element name="booking"/>
+        </index>
+        <index name="index2">
+            <element name="student_pass"/>
+        </index>
+    </element>
+</database>

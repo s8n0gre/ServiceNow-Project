@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1877508_metro_0_metro_payment</collection>
+        <condition/>
+        <description>Auto-generates PAY-BK-### or PAY-SP-### payment ID. Auto-fills amount from linked booking/pass. Updates payment_time on status change.</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Auto Payment ID and Amount</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+    var bookingRef = current.getValue('booking');
+    var passRef = current.getValue('student_pass');
+
+    // Auto-generate Payment ID on Insert
+    if (current.operation() == 'insert' && !current.getValue('payment_id')) {
+        var prefix = 'PAY-';
+        var typeCode = '';
+
+        if (bookingRef) {
+            typeCode = 'BK';
+        } else if (passRef) {
+            typeCode = 'SP';
+        } else {
+            typeCode = 'GN';
+        }
+
+        // Count existing payments of this type
+        var countGr = new GlideRecord('x_1877508_metro_0_metro_payment');
+        countGr.addQuery('payment_id', 'STARTSWITH', prefix + typeCode);
+        countGr.query();
+        var count = countGr.getRowCount() + 1;
+
+        var paddedCount = ('000' + count).slice(-3);
+        current.setValue('payment_id', prefix + typeCode + '-' + paddedCount);
+    }
+
+    // Auto-fill Amount
+    if (!current.getValue('amount') || current.getValue('amount') == '0') {
+        if (bookingRef) {
+            var bkGr = new GlideRecord('x_1877508_metro_0_metro_booking');
+            if (bkGr.get(bookingRef)) {
+                var fareAmount = bkGr.getValue('fare_amount');
+                if (fareAmount) {
+                    current.setValue('amount', fareAmount);
+                }
+            }
+        } else if (passRef) {
+            var spGr = new GlideRecord('x_1877508_metro_0_metro_student_pass');
+            if (spGr.get(passRef)) {
+                var passAmount = spGr.getValue('pass_amount');
+                if (passAmount) {
+                    current.setValue('amount', passAmount);
+                }
+            }
+        }
+    }
+
+    // Update Payment Time on status change
+    var txnStatus = current.getValue('transaction_status');
+    if (txnStatus == 'success' || txnStatus == 'failed') {
+        if (!previous || current.getValue('transaction_status') != previous.getValue('transaction_status')) {
+            current.setValue('payment_time', new GlideDateTime());
+        }
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-18 07:43:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8c6d411df5114f0c9ddefd5a99a76743</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto Payment ID and Amount</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Metro Ticket Booking" source="x_1877508_metro_0">b68293e093adc714aca0f55a7bba1037</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Metro Ticket Booking">b68293e093adc714aca0f55a7bba1037</sys_scope>
+        <sys_update_name>sys_script_8c6d411df5114f0c9ddefd5a99a76743</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-18 07:43:21</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8c6d411df5114f0c9ddefd5a99a76743"/>
+</record_update>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="e46ad5b893ad0b14aca0f55a7bba10dc" label="Metro Booking" max_length="40" name="x_1877508_metro_0_metro_booking" type="collection">
+        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Fare Amount" max_length="20" name="fare_amount" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Passenger Count" max_length="40" name="passenger_count" type="integer"/>
+        <element label="Booking Number" max_length="40" name="booking_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Booking Status" max_length="40" name="booking_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+                <element inactive_on_update="false" label="Expired" sequence="4" value="expired"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="1" value="confirmed"/>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="draft"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Destination Station" max_length="32" name="destination_station" reference="x_1877508_metro_0_metro_stations" type="reference"/>
+        <element label="Journey Date" max_length="40" name="journey_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Passenger" max_length="32" name="passenger" reference="x_1877508_metro_0_metro_passenger" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Source Station" max_length="32" name="source_station" reference="x_1877508_metro_0_metro_stations" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Payment Status" max_length="40" name="payment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Failed" sequence="2" value="failed"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Paid" sequence="1" value="paid"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="destination_station"/>
+        </index>
+        <index name="index2">
+            <element name="passenger"/>
+        </index>
+        <index name="index3">
+            <element name="source_station"/>
+        </index>
+    </element>
+</database>

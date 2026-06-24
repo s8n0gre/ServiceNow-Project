@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="3d3b953c93ad0b14aca0f55a7bba1025" label="metro Fare Matrix" max_length="40" name="x_1877508_metro_0_metro_fare_matrix" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Base Fare" max_length="20" name="base_fare" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Student Discount Percentage" max_length="20" name="student_discount_percentage" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Source Station" max_length="32" name="source_station" reference="x_1877508_metro_0_metro_stations" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Destination Station" max_length="32" name="destination_station" reference="x_1877508_metro_0_metro_stations" type="reference"/>
+        <index name="index">
+            <element name="destination_station"/>
+        </index>
+        <index name="index2">
+            <element name="source_station"/>
+        </index>
+    </element>
+</database>
